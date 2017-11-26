@@ -4,7 +4,7 @@ package com.tangkuo.cn.online.dto;
  * 
  * @ClassName: BaseResponse
  * @Description: (基础响应实体类)
- * @author
+ * @author 
  *
  */
 public class BaseResponse {

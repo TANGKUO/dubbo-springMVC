@@ -19,7 +19,7 @@ import com.tangkuo.cn.online.controller.MonitorServerController;
  * 
  * @ClassName: MonitorServerControllerTest
  * @Description: (测试MonitorServerController类)
- * @author
+ * @author 
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(loader = SpringConfigContextLoader.class)

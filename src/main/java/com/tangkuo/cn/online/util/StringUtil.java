@@ -2,6 +2,11 @@ package com.tangkuo.cn.online.util;
 
 import java.util.UUID;
 
+/**
+ * 
+ * @author 61650
+ *
+ */
 public class StringUtil {
 	/**
 	 * 

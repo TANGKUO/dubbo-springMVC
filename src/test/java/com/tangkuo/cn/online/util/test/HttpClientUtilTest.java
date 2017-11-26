@@ -11,7 +11,7 @@ import com.tangkuo.cn.online.util.StringUtil;
  * 
  * @ClassName: HttpClientUtilTest
  * @Description: (HttpClientUtil测试类)
- * @author
+ * @author 
  */
 public class HttpClientUtilTest {
 	protected static final Logger logger = LoggerFactory.getLogger(HttpClientUtilTest.class);

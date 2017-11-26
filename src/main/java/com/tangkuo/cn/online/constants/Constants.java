@@ -3,7 +3,7 @@ package com.tangkuo.cn.online.constants;
 /**
  * 常量类接口自定义
  * 
- * @author 61650
+ * @author 61650 
  *
  */
 public interface Constants {

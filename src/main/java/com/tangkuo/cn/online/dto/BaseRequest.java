@@ -3,7 +3,7 @@ package com.tangkuo.cn.online.dto;
 /**
  * 请求实体父类
  * 
- * @author 61650
+ * @author 61650 
  *
  */
 public class BaseRequest {

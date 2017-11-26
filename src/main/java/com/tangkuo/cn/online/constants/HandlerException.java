@@ -3,7 +3,7 @@ package com.tangkuo.cn.online.constants;
 /**
  * 自定义业务逻辑异常类
  * 
- * @author 61650
+ * @author 61650 
  *
  */
 public class HandlerException extends Exception {

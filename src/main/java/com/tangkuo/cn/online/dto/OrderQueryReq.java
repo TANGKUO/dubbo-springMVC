@@ -8,7 +8,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 /**
  * 請求接口組織參數實體類
  * 
- * @author 61650
+ * @author 61650 
  *
  */
 public class OrderQueryReq implements Serializable {

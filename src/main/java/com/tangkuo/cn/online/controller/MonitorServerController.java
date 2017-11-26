@@ -15,7 +15,7 @@ import com.tangkuo.cn.online.enums.ApiCode;
 /**
  * 心跳監控服務器類
  * 
- * @author 61650
+ * @author 61650 
  *
  */
 @Controller

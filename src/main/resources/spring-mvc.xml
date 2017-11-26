@@ -35,7 +35,7 @@
 			</list>
 		</property>
 	</bean>
-	<!-- 手动的注解映射的支持 -->
+	<!-- 手动的注解映射的支持  -->
 	<bean
 		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
 		<property name="messageConverters">

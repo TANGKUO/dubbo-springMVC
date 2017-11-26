@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
  * 
  * @ClassName: IPUtils
  * @Description: (ip工具类)
- * @author
+ * @author 
  */
 public class IPUtils {
 	private static Logger logger = LoggerFactory.getLogger(IPUtils.class);

@@ -3,7 +3,7 @@ package com.tangkuo.cn.online.dto;
 /**
  * 接收參數響應結果實體類
  * 
- * @author 61650
+ * @author 61650 
  *
  */
 public class OrderQueryResp extends BaseResponse {

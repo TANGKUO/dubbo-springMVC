@@ -15,7 +15,7 @@ import com.tangkuo.cn.online.base.BaseController;
  * 
  * @ClassName: HttpClient
  * @Description: (HttpClient发送请求)
- * @see
+ * @see 
  */
 public class HttpClient
 {

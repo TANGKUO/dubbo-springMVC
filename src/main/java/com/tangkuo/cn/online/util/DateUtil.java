@@ -5,6 +5,11 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * 
+ * @author 61650
+ *
+ */
 public class DateUtil {
 
 	public static final String PATTERN_STANDARD08W = "yyyyMMdd";
@@ -48,21 +53,14 @@ public class DateUtil {
 		try {
 			return df.parse(source);
 		} catch (ParseException e) {
-			throw new IllegalArgumentException("使用模式 " + pattern + " 无法解析字符串 "
-					+ source + " 生成日期", e);
+			throw new IllegalArgumentException("使用模式 " + pattern + " 无法解析字符串 " + source + " 生成日期", e);
 		}
 	}
 
 	/**
 	 * 
-	 * @Title: formatDate
-	 * @Description: (根据传入的指定格式格式化日期返回)
-	 * @param date
-	 *            Date
-	 * @param format
-	 *            String
-	 * @return String 返回类型
-	 * @throws
+	 * @Title: formatDate @Description: (根据传入的指定格式格式化日期返回) @param date
+	 * Date @param format String @return String 返回类型 @throws
 	 */
 	public static String formatDate(Date date, String format) {
 		SimpleDateFormat dateFormat = new SimpleDateFormat(format);
@@ -71,12 +69,8 @@ public class DateUtil {
 
 	/**
 	 * 
-	 * @Title: formatNow
-	 * @Description: (根据传入的指定格式格式化当前日期)
-	 * @param @param format
-	 * @param @return 设定文件
-	 * @return String 返回类型
-	 * @throws
+	 * @Title: formatNow @Description: (根据传入的指定格式格式化当前日期) @param @param
+	 * format @param @return 设定文件 @return String 返回类型 @throws
 	 */
 	public static String formatNow(String format) {
 		return formatDate(new Date(), format);
@@ -108,16 +102,13 @@ public class DateUtil {
 				pattern = PATTERN_STANDARD17W;
 				break;
 			case 10:
-				pattern = (dateStr.contains("-")) ? PATTERN_STANDARD10H
-						: PATTERN_STANDARD10X;
+				pattern = (dateStr.contains("-")) ? PATTERN_STANDARD10H : PATTERN_STANDARD10X;
 				break;
 			case 16:
-				pattern = (dateStr.contains("-")) ? PATTERN_STANDARD16H
-						: PATTERN_STANDARD16X;
+				pattern = (dateStr.contains("-")) ? PATTERN_STANDARD16H : PATTERN_STANDARD16X;
 				break;
 			case 19:
-				pattern = (dateStr.contains("-")) ? PATTERN_STANDARD19H
-						: PATTERN_STANDARD19X;
+				pattern = (dateStr.contains("-")) ? PATTERN_STANDARD19H : PATTERN_STANDARD19X;
 				break;
 			default:
 				pattern = PATTERN_STANDARD14W;

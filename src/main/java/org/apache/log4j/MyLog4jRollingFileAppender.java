@@ -15,7 +15,7 @@ import org.apache.log4j.spi.LoggingEvent;
  * 
  * @ClassName: MyLog4jRollingFileAppender
  * @Description: (日记输出按照yyyy/MM/dd格式生成文件)
- * @author
+ * @author tangkuo
  *
  */
 public class MyLog4jRollingFileAppender extends RollingFileAppender {

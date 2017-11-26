@@ -6,6 +6,11 @@ import org.slf4j.LoggerFactory;
 
 import com.tangkuo.cn.online.util.StringParam;
 
+/**
+ * 
+ * @author 61650
+ *
+ */
 public class StringParamTest {
 	protected static final Logger logger = LoggerFactory.getLogger(StringParamTest.class);
 

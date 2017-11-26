@@ -2,7 +2,7 @@ package com.tangkuo.cn.online.enums;
 
 /**
  * 
- * @author 61650
+ * @author 61650 
  *
  */
 public enum TransCode {

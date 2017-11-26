@@ -31,7 +31,7 @@ import org.apache.http.util.EntityUtils;
  * 
  * @ClassName: HttpClientUtil
  * @Description: (利用HttpClient进行post请求的工具类)
- * @author
+ * @author 
  * @see
  */
 public class HttpClientUtil {

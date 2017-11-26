@@ -25,7 +25,7 @@ import com.tangkuo.cn.online.util.DateUtil;
  * 
  * @ClassName: OrderQueryControllerTest
  * @Description: (测试OrderQueryController类)
- * @author
+ * @author 
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(loader = SpringConfigContextLoader.class)
