@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+	<!-- appender 部分是可用的日志输出方式定义，可以定义多个 -->
+	<appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="{&quot;tp&quot;:&quot;LOG&quot;, &quot;tm&quot;:&quot;%d&quot;, &quot;lv&quot;:&quot;%p&quot;, &quot;td&quot;:&quot;[%t]&quot;, &quot;dt&quot;:&quot;%m&quot;, &quot;pg&quot;:&quot;%c_%F_%L&quot;} %n" />
+		</layout>
+	</appender>
+
+	<appender name="DEBUG" class="org.apache.log4j.MyLog4jRollingFileAppender">
+		<param name="Encoding" value="UTF-8" />
+		<param name="File"
+			value="/data/app/logs/dubbo-springMVC/yyyy/MM/dd/debug.log" />
+		<param name="Append" value="true" />
+		<param name="MaxFileSize" value="10000KB" />
+		<param name="MaxBackupIndex" value="50" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="{&quot;tp&quot;:&quot;LOG&quot;, &quot;tm&quot;:&quot;%d&quot;, &quot;lv&quot;:&quot;%p&quot;, &quot;td&quot;:&quot;[%t]&quot;, &quot;dt&quot;:&quot;%m&quot;, &quot;pg&quot;:&quot;%c_%F_%L&quot;} %n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="DEBUG" />
+			<param name="LevelMax" value="DEBUG" />
+		</filter>
+	</appender>
+
+	<appender name="INFO" class="org.apache.log4j.MyLog4jRollingFileAppender">
+		<param name="Encoding" value="UTF-8" />
+		<param name="File"
+			value="/data/app/logs/dubbo-springMVC/yyyy/MM/dd/info.log" />
+		<param name="Append" value="true" />
+		<param name="MaxFileSize" value="10000KB" />
+		<param name="MaxBackupIndex" value="50" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="{&quot;tp&quot;:&quot;LOG&quot;, &quot;tm&quot;:&quot;%d&quot;, &quot;lv&quot;:&quot;%p&quot;, &quot;td&quot;:&quot;[%t]&quot;, &quot;dt&quot;:&quot;%m&quot;, &quot;pg&quot;:&quot;%c_%F_%L&quot;} %n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="INFO" />
+			<param name="LevelMax" value="INFO" />
+		</filter>
+	</appender>
+
+	<appender name="WARN" class="org.apache.log4j.MyLog4jRollingFileAppender">
+		<param name="Encoding" value="UTF-8" />
+		<param name="File"
+			value="/data/app/logs/dubbo-springMVC/yyyy/MM/dd/warn.log" />
+		<param name="Append" value="true" />
+		<param name="MaxFileSize" value="10000KB" />
+		<param name="MaxBackupIndex" value="50" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="{&quot;tp&quot;:&quot;LOG&quot;, &quot;tm&quot;:&quot;%d&quot;, &quot;lv&quot;:&quot;%p&quot;, &quot;td&quot;:&quot;[%t]&quot;, &quot;dt&quot;:&quot;%m&quot;, &quot;pg&quot;:&quot;%c_%F_%L&quot;} %n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="WARN" />
+			<param name="LevelMax" value="WARN" />
+		</filter>
+	</appender>
+
+	<appender name="ERROR" class="org.apache.log4j.MyLog4jRollingFileAppender">
+		<param name="Encoding" value="UTF-8" />
+		<param name="File"
+			value="/data/app/logs/dubbo-springMVC/yyyy/MM/dd/error.log" />
+		<param name="Append" value="true" />
+		<param name="MaxFileSize" value="10000KB" />
+		<param name="MaxBackupIndex" value="50" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="{&quot;tp&quot;:&quot;LOG&quot;, &quot;tm&quot;:&quot;%d&quot;, &quot;lv&quot;:&quot;%p&quot;, &quot;td&quot;:&quot;[%t]&quot;, &quot;dt&quot;:&quot;%m&quot;, &quot;pg&quot;:&quot;%c_%F_%L&quot;} %n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="ERROR" />
+			<param name="LevelMax" value="ERROR" />
+		</filter>
+	</appender>
+
+	<!-- 定义org.apache包下只接受INFO级别以上的日志 -->
+	<logger name="org.apache">
+		<level value="INFO" />
+	</logger>
+	<logger name="org.springframework">
+		<level value="INFO" />
+	</logger>
+	<!-- 屏蔽jar 中输出敏感信息 -->
+
+	<!-- root部分定义了log4j的默认输出级别和方式 -->
+	<root>
+		<priority value="DEBUG" /><!-- 接受INFO级别以上的日志 -->
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="DEBUG" />
+		<appender-ref ref="INFO" /><!-- 输出到INFO这个appender -->
+		<appender-ref ref="WARN" />
+		<appender-ref ref="ERROR" />
+	</root>
+
+</log4j:configuration> 
